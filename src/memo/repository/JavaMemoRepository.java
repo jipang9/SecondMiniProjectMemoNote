@@ -35,17 +35,21 @@ public class JavaMemoRepository implements MemoRepository {
     public Optional<Memo> findById(int n) {
         return Optional.empty();
     }
+
+    @Override
     public void delOne(int memoId, String password) {
+        int index = 0;
         for (Memo memo: memoDB) {
             if(memo.getId() != memoId) {
                 continue;
             }
-            else if(memo.getPassword() != password) {
+            else if(!memo.getPassword().equals(password)) {
                 continue;
             }
             else {
-                memoDB.remove(memo);
+                index = memoDB.indexOf(memo);
             }
         }
+        memoDB.remove(index);
     }
 }
