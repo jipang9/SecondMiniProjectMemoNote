@@ -33,4 +33,13 @@ public class JavaMemoRepository implements MemoRepository {
     public void saveMemo(Memo memo) {
         memoDB.add(memo);
     }
+
+    @Override
+    public void delMemo(int memoId) {
+        for (Memo memo: memoDB) {
+            if(memo.getId() == memoId) {
+                memoDB.remove(memo);
+            }
+        }
+    }
 }

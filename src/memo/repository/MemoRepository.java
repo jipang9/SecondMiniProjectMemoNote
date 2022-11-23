@@ -12,6 +12,6 @@ public interface MemoRepository {
 
     void saveMemo(Memo memo);
 
-
+    void delOne(int memoId);
 
 }

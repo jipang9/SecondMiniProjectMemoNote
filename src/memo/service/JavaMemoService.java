@@ -51,5 +51,13 @@ public class JavaMemoService implements MemoService{
         System.out.println("수정할 게시글을 선택하세요");
     }
 
+    @Override
+    public void delMemo() {
+        System.out.println("삭제할 게시글을 선택하세요");
+        Scanner scanner = new Scanner(System.in);
+        int memoId = scanner.nextInt();
+        memoRepository.delMemo(memoId);
+    }
+
 
 }

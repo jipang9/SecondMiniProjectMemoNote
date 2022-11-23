@@ -41,6 +41,9 @@ public class MemoUserInterface {
                         System.out.println(e.getMessage());
                     }
                     break;
+                case 6: // 메모 하나 삭제
+                    memoService.delMemo();
+                    break;
             }
         }while(!exit);
     }

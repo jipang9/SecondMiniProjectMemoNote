@@ -14,4 +14,6 @@ public interface MemoService {
 
     void modifyMemo();
 
+    void delMemo();
+
 }
